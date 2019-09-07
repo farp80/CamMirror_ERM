@@ -32,6 +32,7 @@ function deactivate -d 'Exit virtualenv mode and return to the normal environmen
     end
 
     if test -n "$_OLD_FISH_PROMPT_OVERRIDE"
+       and functions -q _old_fish_prompt
         # Set an empty local `$fish_function_path` to allow the removal of `fish_prompt` using `functions -e`.
         set -l fish_function_path
 
@@ -56,7 +57,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/workspace/exercise-instagram-data-modeling/.venv"
+set -gx VIRTUAL_ENV "/workspace/CamMirror_ERM/.venv"
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | tr "." "\n")[1] -lt 3
@@ -86,8 +87,8 @@ if test -z "$VIRTUAL_ENV_DISABLE_PROMPT"
 
         # Prompt override provided?
         # If not, just prepend the environment name.
-        if test -n "(exercise-instagram-data-modeling) "
-            printf '%s%s' "(exercise-instagram-data-modeling) " (set_color normal)
+        if test -n "(CamMirror_ERM) "
+            printf '%s%s' "(CamMirror_ERM) " (set_color normal)
         else
             printf '%s(%s) ' (set_color normal) (basename "$VIRTUAL_ENV")
         end

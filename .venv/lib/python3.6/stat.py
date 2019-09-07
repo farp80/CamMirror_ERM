@@ -1,1 +1,1 @@
-/usr/lib/python3.6/stat.py
+/home/gitpod/.pyenv/versions/3.6.9/lib/python3.6/stat.py
